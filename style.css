@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+
+.hero {
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero__title {
+    font-size: 5rem;
+    color: white;
+}
+
+.hero__bold--underline {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    z-index: 1;
+}
+.hero__bold--underline::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    height: 16px;
+    z-index: -1;
+    background-color: gray;
+}
