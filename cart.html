@@ -92,15 +92,22 @@
       </div>
 
     <script>
+      // deklarasi array cart untuk menyimpan data cart
       let cart = [];
 
+      // fungsi untuk menampilkan data yang disimpan dari array untuk dimunculkan ke page
       function loadKeranjang() {
+        // ambil data cart yang disimpan di local storage
         const listKeranjang = localStorage.getItem("keranjang");
+        // cek variabel nya apa menampung data atau tidak
         if (listKeranjang) {
+          // jika ada, parse data menjadi array
           cart = JSON.parse(listKeranjang);
           console.log(cart);
+          // lalu tampilkan data di cart nya ke page yang sudah dibuat
           showKeranjang();
         } else {
+          // jika belum ada, tampilkan pesan error
           console.error("Data tidak ada");
         }
       }
